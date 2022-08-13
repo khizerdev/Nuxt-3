@@ -1,6 +1,7 @@
 <template>
     <div>
-        Hello
+        <Greeting/>
+        <FormInput/>
     </div>
 </template>
 
