@@ -7,7 +7,7 @@
   
 
         <ul>
-            <li v-for="item in todos">
+            <li v-for="item in data">
                 {{item.title}} - {{item.id}}
             </li>
         </ul>
@@ -16,9 +16,11 @@
 
 <script setup>
 
-    // const {data} = await useAsyncData('items' , () => $fetch('https://jsonplaceholder.typicode.com/todos'));
+    const {data} = await useAsyncData('items' , () => $fetch('https://jsonplaceholder.typicode.com/todos') , {
+        lazy:false
+    });
 
-    const {data:todos} = useFetch('https://jsonplaceholder.typicode.com/todos')
+    // const {data:todos} = useFetch('https://jsonplaceholder.typicode.com/todos')
     
 </script>
 
