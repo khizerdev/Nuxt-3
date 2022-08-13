@@ -1,0 +1,9 @@
+<template>
+    <div>
+        <ul>
+            <li>Profile</li>
+            <li>Dashboard</li>
+        </ul>
+        <slot/>
+    </div>
+</template>
