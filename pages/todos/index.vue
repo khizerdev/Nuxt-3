@@ -2,13 +2,14 @@
     <div>
         Todos
         <nuxt-link :to="{ name: 'todos-create'}">Create todos</nuxt-link>
-        <nuxt-link :to="{ name: 'todos-todo-id' , params : { id: 5}}">Specific Todo</nuxt-link>
+
 
   
 
         <ul>
             <li v-for="item in data">
-                {{item.title}} - {{item.id}}
+                 <nuxt-link :to="{ name: 'todos-todo-id' , params : { id: item.id}}">{{item.title}}</nuxt-link>  
+                - {{item.id}}
             </li>
         </ul>
     </div>
