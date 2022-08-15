@@ -2,7 +2,7 @@
     <div>
         Todo
         <div>
-            {{todo}}
+            {{todo.title}}
         </div>
     </div>
 </template>
@@ -13,6 +13,10 @@
 
     const {data:todo} = await useFetch(`https://jsonplaceholder.typicode.com/todos/${route.params.id}` , {
         pick:['id','title']
+    })
+
+    useMeta({
+        title: todo.value.title
     })
 
 </script>
